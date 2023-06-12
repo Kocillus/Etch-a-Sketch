@@ -1,10 +1,20 @@
-const DEFAULT_COLOR = '##242424';
-const DEFAULT_MODE = 'singleColor';
-const DEFAULT_SIZE = '16';
+function boardFullfilment(size) {
+    let grid = document.querySelector('.gridBox')
+    let squares = grid.querySelectorAll("div");
+    squares.forEach((div) => div.remove());
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-const grid = document.getElementById('grid');
+    let amount = size * size;
+    for (let i = 0; i < amount; i++) {
+        let square = document.createElement('div');
+        square.style.backgroundColor = "blue";
+        grid.insertAdjacentElement("beforeend", square);
+    }
+}
 
-let currentColor = DEFAULT_COLOR;
-let currentMode = DEFAULT_MODE;
-let currentSize = DEFAULT_SIZE;
+boardFullfilment(16);
 
+function changeSize(input) {
+    boardFullfilment(input)
+}

@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta carset="UTF-8">
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Etch-a-Sketch for The Odin Project" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Etch-a-Sketch" />
+        <meta name="author" content="Jan Walaszek" />
         <title>Etch-a-Sketch!</title>  
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Etch-a-Sketch for The Odin Project">
-        <meta name="keywords" content="HTML, CSS, JavaScript, Etch-a-Sketch">
-        <meta name="author" content="Jan Walaszek">
     </head>
     <body>
         <headr>
@@ -23,18 +24,18 @@
                 <button id="rainbowMadness">RAINBOW MADNESS</button>
                 <button id="eraser">ERASER</button>
                 <button id="clear">CLEAR</button>
-                <button id="gridSize">16x16</button>
+                <div id= "gridSize" class="slidecontainer">
+                    <input type="range" min="2" max="128" value="32" step="1" class="slider" id="gridSizeOptionsInput" onchange="changeSize(this.value)">
+                  </div>
+                  <div id="gridSizeOptionsOutput"></div>
             </div>
-            <div class="grid-box">
-                <div id="grid" class="grid">
-
-                </div>
+            <div class="gridBox" id="gridBox">
             </div>
         </main>
         <footer>
             <p>Copyright @ 2023 Jan "Kocilla" Walaszek</p>
         </footer>
-        <script src="./script.js" charset="uft-8">
+        <script src="/script.js" charset="uft-8">
         </script>
     </body>
 </html>
