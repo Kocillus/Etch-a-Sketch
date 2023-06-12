@@ -1,3 +1,6 @@
+click = true;
+let currentColor = "black";
+
 function boardFullfilment(size) {
     let grid = document.querySelector('.gridBox')
     let squares = grid.querySelectorAll("div");
@@ -8,16 +11,46 @@ function boardFullfilment(size) {
     let amount = size * size;
     for (let i = 0; i < amount; i++) {
         let square = document.createElement('div');
-        square.style.backgroundColor = "blue";
+        square.addEventListener("mouseover", colorSquares);
+        square.style.backgroundColor = "white";
         grid.insertAdjacentElement("beforeend", square);
     }
 
     document.getElementById("gridSizeOptionsOutput").innerHTML = size + ' x ' + size;
 }
 
-boardFullfilment(16);
-
+boardFullfilment(20);
 
 function changeSize(input) {
     boardFullfilment(input);
 }
+
+function colorSquares() {
+    if (click) {
+      if (color === "currentColor") {
+        this.style.backgroundColor = currentColor;
+      } 
+
+      if (color === "shadowing") {
+        this.style.backgroundColor = currentColor;
+      } 
+      
+      if (color === "rainbowMadness") {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      } 
+
+      if (color === "eraser") {
+        this.style.backgroundColor = "white";
+      } 
+
+      if (color === "clear") {
+        let grid = document.querySelector('.gridBox')
+        let squares = grid.querySelectorAll("div");
+        squares.forEach((div) => (div.style.backgroundColor = "white"));
+      }
+    }
+  }
+
+  function changeColor(choice) {
+    color = choice;
+  }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta carset="UTF-8">
         <link rel="stylesheet" href="styles.css" />
@@ -18,14 +18,14 @@
         </headr>
         <main>
             <div class="menu">
-                <button id="colorPicker"></button>
-                <button id="singleColor">SINGLE COLOR</button>
-                <button id="shadowing">SHADOWING</button>
-                <button id="rainbowMadness">RAINBOW MADNESS</button>
-                <button id="eraser">ERASER</button>
-                <button id="clear">CLEAR</button>
+                <input id="colorPicker" type="color" value="#333333" onchange="changeColor(this.value)" />
+                <button id="singleColor" onclick="changeColor('currentColor')">SINGLE COLOR</button>
+                <button id="shadowing" onclick="changeColor('shadowing')">SHADOWING</button>
+                <button id="rainbowMadness" onclick="changeColor('rainbowMadness')">RAINBOW MADNESS</button>
+                <button id="eraser" onclick="changeColor('eraser')">ERASER</button>
+                <button id="clear" onclick="changeColor('clear')">CLEAR</button>
                 <div id= "gridSize" class="slidecontainer">
-                    <input type="range" min="2" max="128" value="" step="1" class="slider" id="gridSizeOptionsInput" onchange="changeSize(this.value)">
+                    <input type="range" min="0" max="100" value="20" step="10" class="slider" id="gridSizeOptionsInput" onchange="changeSize(this.value)">
                   </div>
                   <div id="gridSizeOptionsOutput"></div>
             </div>
