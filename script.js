@@ -11,10 +11,13 @@ function boardFullfilment(size) {
         square.style.backgroundColor = "blue";
         grid.insertAdjacentElement("beforeend", square);
     }
+
+    document.getElementById("gridSizeOptionsOutput").innerHTML = size + ' x ' + size;
 }
 
 boardFullfilment(16);
 
+
 function changeSize(input) {
-    boardFullfilment(input)
+    boardFullfilment(input);
 }
