@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta carset="UTF-8">
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="Etch-a-Sketch for The Odin Project" />
-        <meta name="keywords" content="HTML, CSS, JavaScript, Etch-a-Sketch" />
-        <meta name="author" content="Jan Walaszek" />
-        <title>Etch-a-Sketch!</title>  
-    </head>
-    <body>
-        <headr>
-            <h1>
-                Etch-a-Sketch!
-            </h1>
-        </headr>
-        <main>
-            <div class="menu">
-                <input id="colorPicker" type="color" value="#333333" onchange="changeColor(this.value)" />
-                <button id="singleColor" onclick="changeColor('currentColor')">SINGLE COLOR</button>
-                <button id="shadowing" onclick="changeColor('shadowing')">SHADOWING</button>
-                <button id="rainbowMadness" onclick="changeColor('rainbowMadness')">RAINBOW MADNESS</button>
-                <button id="eraser" onclick="changeColor('eraser')">ERASER</button>
-                <button id="clear" onclick="changeColor('clear')">CLEAR</button>
-                <div id= "gridSize" class="slidecontainer">
-                    <input type="range" min="0" max="100" value="20" step="10" class="slider" id="gridSizeOptionsInput" onchange="changeSize(this.value)">
-                  </div>
-                  <div id="gridSizeOptionsOutput"></div>
-            </div>
-            <div class="gridBox" id="gridBox">
-            </div>
-        </main>
-        <footer>
-            <p>Copyright @ 2023 Jan "Kocilla" Walaszek</p>
-        </footer>
-        <script src="/script.js" charset="uft-8">
-        </script>
-    </body>
+  <head>
+    <meta carset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Etch-a-Sketch for The Odin Project" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Etch-a-Sketch" />
+    <meta name="author" content="Jan Walaszek" />
+    <title>Etch-a-Sketch!</title>
+  </head>
+  <body>
+    <headr>
+      <h1>Etch-a-Sketch!</h1>
+    </headr>
+    <main>
+      <div class="menu">
+        <input
+          id="colorPicker"
+          type="color"
+          value="#FCAE1E"
+          onchange="changeColor(this.value)"
+        />
+        <button id="singleColor" onclick="changeAction('currentColor')">
+          SINGLE COLOR
+        </button>
+        <button id="black" onclick="changeAction('black')">
+          BLACK PAINT
+        </button>
+        <button id="rainbowMadness" onclick="changeAction('rainbowMadness')">
+          RAINBOW MADNESS
+        </button>
+        <button id="eraser" onclick="changeAction('eraser')">ERASER</button>
+        <button id="clear" onclick="clearBoard()">CLEAR</button>
+        <div id="gridSize" class="slidecontainer">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="20"
+            step="10"
+            class="slider"
+            id="gridSizeOptionsInput"
+            onchange="changeSize(this.value)"
+          />
+        </div>
+        <div id="gridSizeOptionsOutput"></div>
+      </div>
+      <div class="gridBox" id="gridBox"></div>
+    </main>
+    <footer>
+      <p>Copyright @ 2023 Jan "Kocilla" Walaszek</p>
+    </footer>
+    <script src="/script.js" charset="uft-8"></script>
+  </body>
 </html>
