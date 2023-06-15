@@ -22,18 +22,18 @@
           value="#FCAE1E"
           onchange="changeColor(this.value)"
         />
-        <button id="singleColor" onclick="changeAction('currentColor')">
+        <button class="colorOption" id="singleColor" onclick="changeAction('currentColor')">
           SINGLE COLOR
         </button>
-        <button id="black" onclick="changeAction('black')">
-          BLACK PAINT
+        <button class="mode" id="mode">
+          PAINTING MODE
         </button>
-        <button id="rainbowMadness" onclick="changeAction('rainbowMadness')">
+        <button class="colorOption" id="rainbowMadness" onclick="changeAction('rainbowMadness')">
           RAINBOW MADNESS
         </button>
-        <button id="eraser" onclick="changeAction('eraser')">ERASER</button>
-        <button id="clear" onclick="clearBoard()">CLEAR</button>
-        <div id="gridSize" class="slidecontainer">
+        <button class="colorOption" id="eraser" onclick="changeAction('eraser')">ERASER</button>
+        <button class="colorOption" id="clear" onclick="clearBoard()">CLEAR</button>
+        <div class="colorOption" id="gridSize" class="slidecontainer">
           <input
             type="range"
             min="0"
@@ -52,6 +52,6 @@
     <footer>
       <p>Copyright @ 2023 Jan "Kocilla" Walaszek</p>
     </footer>
-    <script src="/script.js" charset="uft-8"></script>
+    <script src="/main.js" charset="uft-8"></script>
   </body>
 </html>

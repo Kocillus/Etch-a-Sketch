@@ -26,27 +26,6 @@ function changeSize(input) {
     boardFullfilment(input);
 }
  
-function colorSquares(square ) {
-    if (click) {
-      if (currentAction === "currentColor") {
-        square.style.backgroundColor = currentColor;
-        console.log("dupa");
-      } 
- 
-      if (currentAction === "black") {
-        square.style.backgroundColor = "black";
-      } 
- 
-      if (currentAction === "rainbowMadness") {
-        square.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-      } 
- 
-      if (currentAction === "eraser") {
-        square.style.backgroundColor = "white";
-      } 
-    }
-  }
- 
   function clearBoard() {
     let grid = document.querySelector('.gridBox')
     let squares = grid.querySelectorAll("div");
@@ -59,4 +38,38 @@ function colorSquares(square ) {
  
   function changeColor(col) {
     currentColor=col;
+  }
+
+  document.querySelector("body").addEventListener("click", (e) => {
+    if (e.target.tagName != "BUTTON") {
+      click = !click;
+      if (click) {
+        let coloringMode = true;
+        document.querySelector("#mode").textContent = "COLORING MODE";
+        document.getElementById("mode").style.backgroundColor = "green";
+      } else {
+        let coloringMode = false;
+        document.querySelector("#mode").textContent = "NOT COLORING MODE";
+        document.getElementById("mode").style.backgroundColor = "gray";
+        }
+      }
+    }
+  );
+
+  let  coloringMode = true
+  
+    function colorSquares(square) {
+    if (click) {
+      if (currentAction === "currentColor") {
+        square.style.backgroundColor = currentColor;
+      } 
+
+      if (currentAction === "rainbowMadness") {
+        square.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      } 
+ 
+      if (currentAction === "eraser") {
+        square.style.backgroundColor = "white";
+      } 
+    }
   }
