@@ -20,7 +20,7 @@ function boardFullfilment(size) {
     document.getElementById("gridSizeOptionsOutput").innerHTML = size + ' x ' + size;
 }
  
-boardFullfilment(20);
+boardFullfilment(40);
  
 function changeSize(input) {
     boardFullfilment(input);
@@ -40,17 +40,17 @@ function changeSize(input) {
     currentColor=col;
   }
 
-  document.querySelector("body").addEventListener("click", (e) => {
-    if (e.target.tagName != "BUTTON") {
+  document.querySelector("#mode").addEventListener("click", (e) => {
+    if (e.target.tagName = "BUTTON") {
       click = !click;
       if (click) {
         let coloringMode = true;
         document.querySelector("#mode").textContent = "COLORING MODE";
-        document.getElementById("mode").style.backgroundColor = "green";
+        document.getElementById("mode").style.backgroundColor = "rgba(255, 196, 0, 0.788)";
       } else {
         let coloringMode = false;
         document.querySelector("#mode").textContent = "NOT COLORING MODE";
-        document.getElementById("mode").style.backgroundColor = "gray";
+        document.getElementById("mode").style.backgroundColor = "rgba(65, 65, 65, 0.151)";
         }
       }
     }

@@ -4,7 +4,16 @@ header {
 
 h1 {
   text-align: center;
-  margin: 50px auto;
+  margin: 30px auto;
+  font-size: 40px;
+  color:#302f2f;
+  font-weight: 400; 
+}
+
+body {
+  background: linear-gradient(90deg, rgb(234, 234, 235) 0%, rgb(204, 204, 204) 50%, rgba(234, 234, 235) 100%);
+  font-family: monospace; 
+  font-weight: 400; 
 }
 
 main {
@@ -12,8 +21,13 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  height: 500px;
-  width: 50vw;
+  height: 550px;
+  width: 60vw;
+  padding: 100px;
+  border: solid 2px #FCAE1E;
+  border-radius:  10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
 }
 
 .menu {
@@ -21,46 +35,117 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: right;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   width: 15vw;
 }
 
 .menu button {
   width: 180px;
   height: 50px;
-  background-color: transparent;
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: solid 1px rgb(184, 184, 184);
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #302f2f;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-family: monospace;
+  font-weight: 600;
 }
 
-#colorPicker {
+.menu button:hover {
+  background-color: rgba(255, 196, 0, 0.788);
+}
+
+.menu button:active {
+  background-color: rgb(184, 184, 184);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input#colorPicker {
   width: 100px;
   height: 100px;
-  background-color: blue;
+  background-color: rgb(184, 184, 184);;
   border-radius: 10px;
 }
 
+#mode {
+  background-color: rgba(255, 196, 0, 0.788);
+}
+
 .gridBox {
-  margin: 0;
-  width: 500px;
-  height: 500px;
-  border: solid 1px black;
+  margin: 0 auto;
+  width: 550px;
+  height: 550px;
+  border: solid 1px #FCAE1E;
   border-radius: 5px;
   display: grid;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 10rem;
+}
+
+/*Chrome, Safari, Edge Track*/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #FCAE1E;
+  height: 0.3rem;
+  border-radius: 2rem;
+}
+
+/*Firefox Track*/
+input[type="range"]::-moz-range-track {
+  background: #FCAE1E;
+  height: 0.3rem;
+  border-radius: 2rem;
+}
+
+/*Chrome, Safari, Edge Thumb*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #666;
+  height: 5px;
+  width: 2px;    
+}
+
+/*Firefox Thumb*/
+input[type="range"]::-moz-range-thumb {
+  border: none; 
+  border-radius: 50%;
+  background-color: #666;
+  height: 0.8rem;
+  width: 0.8rem;    
+}
+
+#gridSizeOptionsOutput {
+  color: #302f2f;
+  font-size: 15px;
+  margin: 0;
+}
+
 footer {
-  position: absolute;
+  padding: 20px;
   bottom: 0;
   left: 0;
   display: flex;
   flex-direction: row;
   text-align: center;
-  width: 100%;
+  width: auto;
 }
 
 footer p {
   margin: 0 auto;
+  color: #302f2f;
 }
