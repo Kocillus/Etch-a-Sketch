@@ -22,17 +22,17 @@
           value="#FCAE1E"
           onchange="changeColor(this.value)"
         />
-        <button  id="singleColor" onclick="changeAction('currentColor')">
+        <button  class="button" id="singleColor" onclick="changeAction('currentColor')">
           SINGLE COLOR
         </button>
+        <button class="colorOption button" id="rainbowMadness" onclick="changeAction('rainbowMadness')">
+          RAINBOW MADNESS
+        </button>
+        <button  class="button" id="eraser" onclick="changeAction('eraser')">ERASER</button>
+        <button class="button" id="clear" onclick="clearBoard()">CLEAR</button>
         <button id="mode">
           PAINTING MODE
         </button>
-        <button class="colorOption" id="rainbowMadness" onclick="changeAction('rainbowMadness')">
-          RAINBOW MADNESS
-        </button>
-        <button  id="eraser" onclick="changeAction('eraser')">ERASER</button>
-        <button id="clear" onclick="clearBoard()">CLEAR</button>
         <div id="gridSize" class="slidecontainer">
           <input
             type="range"

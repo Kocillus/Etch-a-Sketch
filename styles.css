@@ -8,6 +8,7 @@ h1 {
   font-size: 40px;
   color:#302f2f;
   font-weight: 400; 
+  text-shadow: 2px 2px 3px #FCAE1E;
 }
 
 body {
@@ -42,7 +43,7 @@ main {
   width: 15vw;
 }
 
-.menu button {
+.button, #mode {
   width: 180px;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -59,11 +60,11 @@ main {
   font-weight: 600;
 }
 
-.menu button:hover {
+.button:hover, #mode {
   background-color: rgba(255, 196, 0, 0.788);
 }
 
-.menu button:active {
+.button:active {
   background-color: rgb(184, 184, 184);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -78,6 +79,7 @@ input#colorPicker {
 
 #mode {
   background-color: rgba(255, 196, 0, 0.788);
+  cursor: default;
 }
 
 .gridBox {

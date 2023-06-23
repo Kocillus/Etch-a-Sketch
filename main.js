@@ -40,15 +40,13 @@ function changeSize(input) {
     currentColor=col;
   }
 
-  document.querySelector("#mode").addEventListener("click", (e) => {
-    if (e.target.tagName = "BUTTON") {
+  document.querySelector("body").addEventListener("click", (e) => {
+    if ((e.target.tagName != "BUTTON") && (e.target.tagName != "INPUT")){
       click = !click;
       if (click) {
-        let coloringMode = true;
         document.querySelector("#mode").textContent = "COLORING MODE";
         document.getElementById("mode").style.backgroundColor = "rgba(255, 196, 0, 0.788)";
       } else {
-        let coloringMode = false;
         document.querySelector("#mode").textContent = "NOT COLORING MODE";
         document.getElementById("mode").style.backgroundColor = "rgba(65, 65, 65, 0.151)";
         }
@@ -56,20 +54,28 @@ function changeSize(input) {
     }
   );
 
-  let  coloringMode = true
   
     function colorSquares(square) {
     if (click) {
       if (currentAction === "currentColor") {
         square.style.backgroundColor = currentColor;
+        document.getElementById("singleColor").style.backgroundColor = "rgba(255, 196, 0, 0.788)";
+        document.getElementById("rainbowMadness").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        document.getElementById("eraser").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       } 
 
       if (currentAction === "rainbowMadness") {
         square.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        document.getElementById("singleColor").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        document.getElementById("rainbowMadness").style.backgroundColor = "rgba(255, 196, 0, 0.788)";
+        document.getElementById("eraser").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       } 
  
       if (currentAction === "eraser") {
         square.style.backgroundColor = "white";
+        document.getElementById("singleColor").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        document.getElementById("rainbowMadness").style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        document.getElementById("eraser").style.backgroundColor = "rgba(255, 196, 0, 0.788)";
       } 
     }
   }
