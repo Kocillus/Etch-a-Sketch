@@ -5,5 +5,8 @@ It is my "Etch-a-Sketch" project for The Odin Project. The main goal was creatin
 ## Technologies
 HTML, CSS, JavaScript
 
+## Live demo
+https://kocillus.github.io/Etch-a-Sketch/
+
 ## Status
 Completed [at this moment].
